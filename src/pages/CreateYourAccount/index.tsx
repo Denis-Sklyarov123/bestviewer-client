@@ -1,9 +1,14 @@
 import "./style.css";
+import React from "react";
 import BtnAccount from "../../components/BtnAccount/index.tsx";
 import BtnUniversal from "../../components/BtnUniversal/index.tsx";
 import { useNavigate } from "react-router-dom";
 import Checkbox from "../../components/Checkbox/index.tsx";
 import InputUniversal from "../../components/InputUniversal/index.tsx";
+// import AppleIcon from "../../assets/icon/apple.svg";
+// import FacebookIcon from "../../assets/icon/facebook.svg";
+// import GoogleIcon from "../../assets/icon/google.svg";
+import CinemaLogo from "../../assets/icon/film.svg";
 
 function CreateYourAccount() {
   const navigate = useNavigate();
@@ -12,6 +17,7 @@ function CreateYourAccount() {
     <>
       <div>
         <a target="_blank">
+          <img src={CinemaLogo} className="logo" alt="Vite logo" />
           <div></div>
         </a>
       </div>

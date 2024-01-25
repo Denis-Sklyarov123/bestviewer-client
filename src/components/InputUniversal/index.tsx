@@ -1,8 +1,9 @@
 // import { useState } from "react";
+import React from "react";
 import { InputEnum } from "../../types/enums/InputEnum";
 import "./style.css";
 // import Form from "react-bootstrap/Form";
-import FacebookSvg from "../../assets/img/facebook.svg?react";
+// import FacebookSvg from "../../assets/img/facebook.svg?react";
 
 interface InputType {
   type?: InputEnum;
@@ -16,7 +17,6 @@ function InputUniversal(props: InputType) {
     <>
       {type === InputEnum.password && (
         <div>
-          <FacebookSvg />
           {/* <input type={isShow ? "text" : "password"} />
           {isShow ? (
             <img

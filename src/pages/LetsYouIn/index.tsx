@@ -1,7 +1,12 @@
 import "./style.css";
+import React from "react";
 import BtnAccount from "../../components/BtnAccount/index.tsx";
 import BtnUniversal from "../../components/BtnUniversal/index.tsx";
 import { useNavigate } from "react-router-dom";
+import AppleIcon from "../../assets/icon/apple.svg";
+import FacebookIcon from "../../assets/icon/facebook.svg";
+import GoogleIcon from "../../assets/icon/google.svg";
+import CinemaLogo from "../../assets/icon/videoCameraCinema.svg";
 
 function LetsYouIn() {
   const navigate = useNavigate();
@@ -10,7 +15,7 @@ function LetsYouIn() {
     <>
       <div>
         <a target="_blank">
-          {/* <img src={CinemaLogo} className="logo" alt="Vite logo" /> */}
+          <img src={CinemaLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
       <div style={{ fontSize: "7vh", fontWeight: "bold" }}>Let's you in</div>
@@ -21,7 +26,7 @@ function LetsYouIn() {
           label="Continue with Facebook"
         >
           <div></div>
-          {/* <img src={FacebookIcon} className="IconStyle" alt="IconStyle" /> */}
+          <img src={FacebookIcon} className="IconStyle" alt="IconStyle" />
         </BtnAccount>
         <BtnAccount
           classList="btnAccount"
@@ -30,7 +35,7 @@ function LetsYouIn() {
         >
           <div></div>
 
-          {/* <img src={GoogleIcon} className="IconStyle" alt="IconStyle" /> */}
+          <img src={GoogleIcon} className="IconStyle" alt="IconStyle" />
         </BtnAccount>
         <BtnAccount
           classList="btnAccount"
@@ -39,7 +44,7 @@ function LetsYouIn() {
         >
           <div></div>
 
-          {/* <img src={AppleIcon} className="IconStyle" alt="IconStyle" /> */}
+          <img src={AppleIcon} className="IconStyle" alt="IconStyle" />
         </BtnAccount>
         <h4 className="or">or</h4>
       </div>
