@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import LetsYouIn from "./pages/letsYouIn/index.tsx";
+import LetsYouIn from "./pages/LetsYouIn/index.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Contact from "./routes/Contact.tsx";
+import CreateYourAccount from "./pages/CreateYourAccount/index.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LetsYouIn />,
   },
-  { path: "contacts/:contactId", element: <Contact /> },
+  { path: "CreateYourAccount", element: <CreateYourAccount /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
