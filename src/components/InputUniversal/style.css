@@ -1,7 +1,12 @@
-.custom-form {
+/* .custom-form {
   background-color: #fafafa;
   border-radius: 7px;
   border-color: transparent;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   padding: 2vh;
+} */
+
+.icon-input-container {
+  border-radius: 50%;
+  border: 1px solid #0000;
 }

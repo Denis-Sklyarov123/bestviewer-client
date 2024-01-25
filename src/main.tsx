@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <LetsYouIn />,
   },
-  { path: "CreateYourAccount", element: <CreateYourAccount /> },
+  { path: "createaccount", element: <CreateYourAccount /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

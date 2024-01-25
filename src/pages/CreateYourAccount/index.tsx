@@ -1,14 +1,15 @@
 import "./style.css";
-import React from "react";
+// import React from "react";
 import BtnAccount from "../../components/BtnAccount/index.tsx";
 import BtnUniversal from "../../components/BtnUniversal/index.tsx";
 import { useNavigate } from "react-router-dom";
 import Checkbox from "../../components/Checkbox/index.tsx";
 import InputUniversal from "../../components/InputUniversal/index.tsx";
-// import AppleIcon from "../../assets/icon/apple.svg";
-// import FacebookIcon from "../../assets/icon/facebook.svg";
-// import GoogleIcon from "../../assets/icon/google.svg";
-import CinemaLogo from "../../assets/icon/film.svg";
+import AppleIcon from "../../assets/icon/apple.svg?react";
+import FacebookIcon from "../../assets/icon/facebook.svg?react";
+import GoogleIcon from "../../assets/icon/google.svg?react";
+import CinemaLogo from "../../assets/icon/film.svg?react";
+import { InputEnum } from "../../types/enums/InputEnum.ts";
 
 function CreateYourAccount() {
   const navigate = useNavigate();
@@ -17,13 +18,12 @@ function CreateYourAccount() {
     <>
       <div>
         <a target="_blank">
-          <img src={CinemaLogo} className="logo" alt="Vite logo" />
-          <div></div>
+          <CinemaLogo width={125} height={125} />
         </a>
       </div>
       <h2>Create Your Account</h2>
       <div>
-        <InputUniversal />
+        <InputUniversal type={InputEnum.email} />
       </div>
       <div className="checkbox-container">
         <Checkbox labelProp="Remember me" classList="custom-styles-checkbox" />
@@ -42,21 +42,21 @@ function CreateYourAccount() {
           onClick={() => console.log("click")}
           label=""
         >
-          <div></div>
+          <FacebookIcon width={22} height={25} />
         </BtnAccount>
         <BtnAccount
           classList="btnAccount center-button"
           onClick={() => console.log("lox")}
           label=""
         >
-          <div></div>
+          <GoogleIcon width={22} height={25} />
         </BtnAccount>
         <BtnAccount
           classList="btnAccount"
           onClick={() => console.log("click")}
           label=""
         >
-          <div></div>
+          <AppleIcon width={28} height={30} />
         </BtnAccount>
       </div>
       <div className="content-section">
