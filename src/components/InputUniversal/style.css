@@ -7,6 +7,27 @@
 } */
 
 .icon-input-container {
-  border-radius: 50%;
-  border: 1px solid #0000;
+  border-radius: 10px;
+  display: flex;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 7vh;
+}
+
+.input {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  border: 0px;
+  width: 70%;
+}
+
+.container-icon {
+  display: flex;
+  margin: 0 auto;
+  width: 15%;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+
+.pass-icon-input-container {
+  display: flex;
 }

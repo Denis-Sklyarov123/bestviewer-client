@@ -25,6 +25,9 @@ function CreateYourAccount() {
       <div>
         <InputUniversal type={InputEnum.email} />
       </div>
+      <div>
+        <InputUniversal type={InputEnum.password} />
+      </div>
       <div className="checkbox-container">
         <Checkbox labelProp="Remember me" classList="custom-styles-checkbox" />
       </div>
