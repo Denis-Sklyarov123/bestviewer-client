@@ -46,3 +46,9 @@
 .custom-styles-checkbox {
   margin-bottom: 2vh;
 }
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}

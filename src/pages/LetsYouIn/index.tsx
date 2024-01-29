@@ -51,13 +51,13 @@ function LetsYouIn() {
       <div>
         <BtnUniversal
           classList="btnUniversal"
-          onClick={() => console.log("click")}
+          onClick={() => navigate("/login")}
           label="Sign in with password"
         />
       </div>
       <div className="content-section">
         <p className="read-the-docs">Don't have an account? </p>
-        <p className="sign-up-text" onClick={() => navigate("/createaccount")}>
+        <p className="sign-up-text" onClick={() => navigate("/create")}>
           Sign up
         </p>
       </div>

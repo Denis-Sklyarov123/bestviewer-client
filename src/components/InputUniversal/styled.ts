@@ -5,7 +5,8 @@ export const ContainerWrapper = styled.div<{ $isFocused: boolean }>`
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 7vh;
-  border: 1px solid ${(props) => (props.$isFocused ? "green" : "gray")};
+  border: ${({ $isFocused }) => ($isFocused ? "1" : "0")}px solid
+    ${({ $isFocused }) => ($isFocused ? "green" : "gray")};
   background: ${(props) => (props.$isFocused ? "#ebfaf1" : "#fafafa")};
   overflow: hidden;
 `;
@@ -28,7 +29,6 @@ export const CustomInput = styled.input<{
   border: 0px;
   width: ${({ $isDefault }) => ($isDefault ? "100" : "85")}%;
   background: ${(props) => (props.$isFocused ? "#ebfaf1" : "#fafafa")};
-
   &:focus {
     outline: none;
     border: 1px solid blue;

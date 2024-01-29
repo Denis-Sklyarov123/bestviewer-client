@@ -1,5 +1,4 @@
 import "./style.css";
-// import React from "react";
 import BtnAccount from "../../components/BtnAccount/index.tsx";
 import BtnUniversal from "../../components/BtnUniversal/index.tsx";
 import { useNavigate } from "react-router-dom";
@@ -11,22 +10,24 @@ import GoogleIcon from "../../assets/icon/google.svg?react";
 import CinemaLogo from "../../assets/icon/film.svg?react";
 import { InputEnum } from "../../types/enums/InputEnum.ts";
 
-function CreateYourAccount() {
+function CreateAccount() {
   const navigate = useNavigate();
 
   return (
     <>
       <div>
         <a target="_blank">
-          <CinemaLogo width={125} height={125} />
+          <CinemaLogo width={100} height={100} />
         </a>
       </div>
       <h2>Create Your Account</h2>
-      <div>
-        <InputUniversal type={InputEnum.email} />
-      </div>
-      <div>
-        <InputUniversal type={InputEnum.password} />
+      <div className="container-input">
+        <div>
+          <InputUniversal type={InputEnum.email} />
+        </div>
+        <div>
+          <InputUniversal type={InputEnum.password} />
+        </div>
       </div>
       <div className="checkbox-container">
         <Checkbox labelProp="Remember me" classList="custom-styles-checkbox" />
@@ -64,7 +65,7 @@ function CreateYourAccount() {
       </div>
       <div className="content-section">
         <p className="read-the-docs">Already have an account? </p>
-        <p className="sign-in-text" onClick={() => navigate("/test")}>
+        <p className="sign-in-text" onClick={() => navigate("/login")}>
           Sign in
         </p>
       </div>
@@ -72,4 +73,4 @@ function CreateYourAccount() {
   );
 }
 
-export default CreateYourAccount;
+export default CreateAccount;
