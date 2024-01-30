@@ -5,6 +5,8 @@
   text-align: center;
 }
 
+/* куда перестить root? */
+
 .btnAccount {
   display: flex;
   flex-direction: row;

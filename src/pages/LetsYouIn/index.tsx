@@ -11,6 +11,8 @@ import {
   ContentSection,
   ClickableText,
   SignUpMessage,
+  Header,
+  ContinueWith,
 } from "./styled";
 
 function LetsYouIn() {
@@ -19,7 +21,7 @@ function LetsYouIn() {
   return (
     <>
       <CinemaLogo width={125} height={110} />
-      <div style={{ fontSize: "7vh", fontWeight: "bold" }}>Let's you in</div>
+      <Header>Let's you in</Header>
       <AccountSelectorBar>
         <BtnAccount
           classList="btnAccount"
@@ -42,15 +44,13 @@ function LetsYouIn() {
         >
           <AppleIcon width={28} height={25} />
         </BtnAccount>
-        <h4 style={{ marginBottom: "0px" }}>or</h4>
+        <ContinueWith>or</ContinueWith>
       </AccountSelectorBar>
-      <div>
-        <BtnUniversal
-          classList="btnUniversal"
-          onClick={() => navigate("/login")}
-          label="Sign in with password"
-        />
-      </div>
+      <BtnUniversal
+        classList="btnUniversal"
+        onClick={() => navigate("/login")}
+        label="Sign in with password"
+      />
       <ContentSection>
         <SignUpMessage>Don't have an account? </SignUpMessage>
         <ClickableText onClick={() => navigate("/create")}>
