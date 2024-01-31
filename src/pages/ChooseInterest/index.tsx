@@ -8,9 +8,24 @@ import {
   ContainerBtnNavigate,
 } from "./styled";
 import BtnGenre from "../../components/BtnGenre";
+import { useEffect, useState } from "react";
 
 function ChooseInterest() {
   const navigate = useNavigate();
+  const [ganre123, setGanre123] = useState<string[] | never>([]);
+  const ganres = [
+    { name: "aaa", lable: "AAAA" },
+    { name: "bbb", lable: "BBB" },
+    { name: "qwe_qwe", lable: "Qwe Qwe" },
+  ];
+
+  const setNewGange = (ganre: string) => {
+    setGanre123(ganre);
+  };
+
+  useEffect(() => {
+    console.log(ganre123);
+  }, [ganre123]);
 
   return (
     <>
@@ -20,21 +35,14 @@ function ChooseInterest() {
         worry, you can always change this later.
       </InterestsSelector>
       <AccountSelectorBar>
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
-        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        {ganres.map((item) => (
+          <BtnGenre
+            setNewGange={() => setNewGange(item.name)}
+            label={item.lable}
+            name={item.name}
+            key={item.name}
+          />
+        ))}
       </AccountSelectorBar>
 
       <ContainerBtnNavigate>

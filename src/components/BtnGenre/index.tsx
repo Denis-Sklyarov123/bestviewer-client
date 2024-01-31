@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { StyledBtnGenre } from "./styled";
 
-interface BtnUniversalType {
-  onClick: () => void;
-  label?: string;
+interface BtnGenreProps {
+  setNewGange: (ganre: string) => void;
+  label: string;
+  name: string;
 }
 
-function BtnGenre(props: BtnUniversalType) {
-  const { onClick, label } = props;
+function BtnGenre(props: BtnGenreProps) {
+  const { label, name, setNewGange } = props;
+  const [active, setActive] = useState(false);
+  const onClick = () => {
+    setNewGange(name);
+    setActive(!active);
+  };
 
   return (
-    <StyledBtnGenre onClick={onClick} variant="primary">
+    <StyledBtnGenre active={active} onClick={onClick} variant="primary">
       <div>{label}</div>
     </StyledBtnGenre>
   );

@@ -1,9 +1,16 @@
 import { Button, ButtonProps } from "react-bootstrap";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const StyledBtnGenre = styled(Button)<ButtonProps>`
-  background-color: #06c149;
+export const StyledBtnGenre = styled(Button)<ButtonProps, { active?: boolean }>`
+  background-color: white;
   border-radius: 10vh;
   min-width: 13vh;
-  color: white;
+  color: #06c149;
+
+  ${({ active }) =>
+    active &&
+    css`
+      background-color: #06c149;
+      color: white;
+    `}
 `;
