@@ -35,7 +35,11 @@ function LoginAccount() {
 
       <Checkbox labelProp="Remember me" classList="custom-styles-checkbox" />
 
-      <UniversalBtn onClick={() => navigate("/interest")} label="Sign in" />
+      <UniversalBtn
+        bgColor="#06c149"
+        onClick={() => navigate("/interest")}
+        label="Sign in"
+      />
 
       <ClickableText>Forgot the password? </ClickableText>
 

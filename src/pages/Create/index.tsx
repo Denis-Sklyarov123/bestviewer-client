@@ -35,7 +35,11 @@ function CreateAccount() {
 
       <Checkbox labelProp="Remember me" />
 
-      <UniversalBtn onClick={() => console.log("sign in")} label="Sign up" />
+      <UniversalBtn
+        bgColor="#06c149"
+        onClick={() => console.log("sign in")}
+        label="Sign up"
+      />
 
       <ContinueWith>or continue with</ContinueWith>
 

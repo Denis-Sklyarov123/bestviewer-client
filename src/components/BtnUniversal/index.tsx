@@ -3,13 +3,14 @@ import { StyledBtnUniversal } from "./styled";
 interface BtnUniversalType {
   onClick: () => void;
   label?: string;
+  bgColor: string;
 }
 
 function BtnUniversal(props: BtnUniversalType) {
-  const { onClick, label } = props;
+  const { onClick, label, bgColor } = props;
 
   return (
-    <StyledBtnUniversal onClick={onClick} variant="primary">
+    <StyledBtnUniversal $bgColor={bgColor} onClick={onClick} variant="primary">
       <div>{label}</div>
     </StyledBtnUniversal>
   );

@@ -5,7 +5,9 @@ import {
   Header,
   InterestsSelector,
   UniversalBtn,
+  ContainerBtnNavigate,
 } from "./styled";
+import BtnGenre from "../../components/BtnGenre";
 
 function ChooseInterest() {
   const navigate = useNavigate();
@@ -18,30 +20,35 @@ function ChooseInterest() {
         worry, you can always change this later.
       </InterestsSelector>
       <AccountSelectorBar>
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
-        <UniversalBtn onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
+        <BtnGenre onClick={() => console.log("/click")} label="Drama" />
       </AccountSelectorBar>
 
-      <div>
+      <ContainerBtnNavigate>
         <UniversalBtn
+          bgColor="#e6f9ed"
           onClick={() => navigate("/login")}
           label="Sign in with password"
         />
         <UniversalBtn
+          bgColor="#06c149"
           onClick={() => navigate("/login")}
           label="Sign in with password"
         />
-      </div>
+      </ContainerBtnNavigate>
     </>
   );
 }

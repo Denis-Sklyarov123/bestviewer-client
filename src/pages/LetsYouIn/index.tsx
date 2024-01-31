@@ -1,4 +1,3 @@
-import "./style.css";
 import { useNavigate } from "react-router-dom";
 import AppleIcon from "../../assets/icon/apple.svg?react";
 import FacebookIcon from "../../assets/icon/facebook.svg?react";
@@ -54,6 +53,7 @@ function LetsYouIn() {
       </AccountSelectorBar>
 
       <UniversalBtn
+        bgColor="#06c149"
         onClick={() => navigate("/login")}
         label="Sign in with password"
       />
