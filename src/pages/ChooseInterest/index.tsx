@@ -39,14 +39,18 @@ function ChooseInterest() {
 
       <ContainerBtnNavigate>
         <UniversalBtn
+          minWidth="20vh"
+          color="#06c149"
           bgColor="#e6f9ed"
           onClick={() => navigate("/login")}
-          label="Sign in with password"
+          label="Skip"
         />
         <UniversalBtn
+          minWidth="20vh"
+          color=""
           bgColor="#06c149"
           onClick={() => navigate("/login")}
-          label="Sign in with password"
+          label="Continue"
         />
       </ContainerBtnNavigate>
     </>

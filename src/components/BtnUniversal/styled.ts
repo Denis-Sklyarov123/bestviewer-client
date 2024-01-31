@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 export const StyledBtnUniversal = styled(Button)<
   ButtonProps,
-  { $bgColor?: string }
+  { $bgColor?: string; $color?: string; $minWidth?: string }
 >`
   background-color: ${({ $bgColor }) => ($bgColor ? $bgColor : "transparent")};
   border-radius: 10vh;
-  min-width: 40vh;
-  color: white;
+  min-width: ${({ $minWidth }) => ($minWidth ? $minWidth : "40vh")};
+  color: ${({ $color }) => ($color ? $color : "white")};
   margin-top: 2vh;
 `;

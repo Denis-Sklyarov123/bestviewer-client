@@ -4,13 +4,21 @@ interface BtnUniversalType {
   onClick: () => void;
   label?: string;
   bgColor: string;
+  color: string;
+  minWidth: string;
 }
 
 function BtnUniversal(props: BtnUniversalType) {
-  const { onClick, label, bgColor } = props;
+  const { onClick, label, bgColor, color, minWidth } = props;
 
   return (
-    <StyledBtnUniversal $bgColor={bgColor} onClick={onClick} variant="primary">
+    <StyledBtnUniversal
+      $minWidth={minWidth}
+      $color={color}
+      $bgColor={bgColor}
+      onClick={onClick}
+      variant="primary"
+    >
       <div>{label}</div>
     </StyledBtnUniversal>
   );

@@ -36,6 +36,8 @@ function LoginAccount() {
       <Checkbox labelProp="Remember me" classList="custom-styles-checkbox" />
 
       <UniversalBtn
+        minWidth=""
+        color=""
         bgColor="#06c149"
         onClick={() => navigate("/interest")}
         label="Sign in"

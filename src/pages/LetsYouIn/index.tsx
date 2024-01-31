@@ -53,6 +53,8 @@ function LetsYouIn() {
       </AccountSelectorBar>
 
       <UniversalBtn
+        minWidth=""
+        color=""
         bgColor="#06c149"
         onClick={() => navigate("/login")}
         label="Sign in with password"

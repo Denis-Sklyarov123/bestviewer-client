@@ -23,4 +23,5 @@ export const UniversalBtn = styled(BtnUniversal)``;
 export const ContainerBtnNavigate = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
