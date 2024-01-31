@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 
 interface CheckboxType {
   labelProp: string;
-  classList: string;
+  classList?: string;
 }
 
 function Checkbox(props: CheckboxType) {

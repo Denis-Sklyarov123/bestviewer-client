@@ -1,6 +1,4 @@
 import "./style.css";
-import BtnAccount from "../../components/BtnAccount/index.tsx";
-import BtnUniversal from "../../components/BtnUniversal/index.tsx";
 import { useNavigate } from "react-router-dom";
 import AppleIcon from "../../assets/icon/apple.svg?react";
 import FacebookIcon from "../../assets/icon/facebook.svg?react";
@@ -13,7 +11,10 @@ import {
   SignUpMessage,
   Header,
   ContinueWith,
+  AccountBtn,
+  UniversalBtn,
 } from "./styled";
+import BtnAccount from "../../components/BtnAccount";
 
 function LetsYouIn() {
   const navigate = useNavigate();
@@ -21,38 +22,45 @@ function LetsYouIn() {
   return (
     <>
       <CinemaLogo width={125} height={110} />
+
       <Header>Let's you in</Header>
+
       <AccountSelectorBar>
-        <BtnAccount
-          classList="btnAccount"
-          onClick={() => console.log("face")}
+        <AccountBtn
+          bgColor=""
+          onClick={() => console.log("click")}
           label="Continue with Facebook"
         >
           <FacebookIcon width={22} height={25} />
-        </BtnAccount>
-        <BtnAccount
-          classList="btnAccount"
+        </AccountBtn>
+
+        <AccountBtn
+          bgColor=""
           onClick={() => console.log("click")}
           label="Continue with Google"
         >
           <GoogleIcon width={22} height={25} />
-        </BtnAccount>
+        </AccountBtn>
+
         <BtnAccount
-          classList="btnAccount"
+          bgColor=""
           onClick={() => console.log("click")}
           label="Continue with Apple"
         >
           <AppleIcon width={28} height={25} />
         </BtnAccount>
+
         <ContinueWith>or</ContinueWith>
       </AccountSelectorBar>
-      <BtnUniversal
-        classList="btnUniversal"
+
+      <UniversalBtn
         onClick={() => navigate("/login")}
         label="Sign in with password"
       />
+
       <ContentSection>
         <SignUpMessage>Don't have an account? </SignUpMessage>
+
         <ClickableText onClick={() => navigate("/create")}>
           Sign up
         </ClickableText>

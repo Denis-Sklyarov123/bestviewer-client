@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import BtnAccount from "../../components/BtnAccount";
+import BtnUniversal from "../../components/BtnUniversal";
 
 export const Header = styled.div`
   font-size: 7vh;
@@ -30,3 +32,9 @@ export const SignUpMessage = styled.p`
 export const ContinueWith = styled.h4`
   margin-bottom: 0px;
 `;
+
+export const AccountBtn = styled(BtnAccount)`
+  background-color: #000 !important;
+`;
+
+export const UniversalBtn = styled(BtnUniversal)``;

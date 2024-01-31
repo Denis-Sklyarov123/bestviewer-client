@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreateAccount from "./pages/Create/index.tsx";
 import LoginAccount from "./pages/Login/index.tsx";
+import ChooseInterest from "./pages/ChooseInterest/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   },
   { path: "create", element: <CreateAccount /> },
   { path: "login", element: <LoginAccount /> },
+  { path: "interest", element: <ChooseInterest /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

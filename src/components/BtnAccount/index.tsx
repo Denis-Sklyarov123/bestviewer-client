@@ -1,21 +1,25 @@
-import { Button } from "react-bootstrap";
 import { ReactNode } from "react";
+import { StyledBootstrapButton } from "./styled";
 
 interface BtnAccountType {
   onClick: () => void;
   label?: string;
   children: ReactNode;
-  classList: string;
+  bgColor: string;
 }
 
 function BtnAccount(props: BtnAccountType) {
-  const { onClick, classList, label, children } = props;
+  const { onClick, label, children, bgColor } = props;
 
   return (
-    <Button className={classList} onClick={onClick} variant="primary">
+    <StyledBootstrapButton
+      $bgColor={bgColor}
+      onClick={onClick}
+      variant="primary"
+    >
       {children}
       <div>{label}</div>
-    </Button>
+    </StyledBootstrapButton>
   );
 }
 

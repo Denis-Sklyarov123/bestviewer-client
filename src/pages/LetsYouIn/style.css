@@ -5,22 +5,4 @@
   text-align: center;
 }
 
-/* куда перестить root? */
-
-.btnAccount {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  margin-top: 2vh;
-  column-gap: 5px;
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.btnUniversal {
-  background-color: #06c149;
-  border-radius: 10vh;
-  min-width: 40vh;
-  color: white;
-}
+/* куда переместить root? */
