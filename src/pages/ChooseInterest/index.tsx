@@ -1,4 +1,3 @@
-import "./style.css";
 import { useNavigate } from "react-router-dom";
 import {
   AccountSelectorBar,
@@ -12,20 +11,20 @@ import { useEffect, useState } from "react";
 
 function ChooseInterest() {
   const navigate = useNavigate();
-  const [ganre123, setGanre123] = useState<string[] | never>([]);
-  const ganres = [
+  const [genre123, setgenre123] = useState<string[] | never>([]);
+  const genres = [
     { name: "aaa", lable: "AAAA" },
     { name: "bbb", lable: "BBB" },
     { name: "qwe_qwe", lable: "Qwe Qwe" },
   ];
 
-  const setNewGange = (ganre: string) => {
-    setGanre123(ganre);
+  const setNewGange = (genre: string) => {
+    setgenre123((prevgenres) => [...prevgenres, genre]);
   };
 
   useEffect(() => {
-    console.log(ganre123);
-  }, [ganre123]);
+    console.log(genre123);
+  }, [genre123]);
 
   return (
     <>
@@ -35,7 +34,7 @@ function ChooseInterest() {
         worry, you can always change this later.
       </InterestsSelector>
       <AccountSelectorBar>
-        {ganres.map((item) => (
+        {genres.map((item) => (
           <BtnGenre
             setNewGange={() => setNewGange(item.name)}
             label={item.lable}

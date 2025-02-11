@@ -4,7 +4,7 @@ import InputUniversal from "../../components/InputUniversal/index.tsx";
 import AppleIcon from "../../assets/icon/apple.svg?react";
 import FacebookIcon from "../../assets/icon/facebook.svg?react";
 import GoogleIcon from "../../assets/icon/google.svg?react";
-import CinemaLogo from "../../assets/icon/film.svg?react";
+import CinemaLogo from "../../assets/icon/main-icon-sharingan.svg?react";
 import { InputEnum } from "../../types/enums/InputEnum.ts";
 import {
   ContainerInput,
@@ -23,7 +23,7 @@ function LoginAccount() {
 
   return (
     <>
-      <CinemaLogo width={100} height={100} />
+      <CinemaLogo width={200} height={200} />
 
       <Header>Login to Your Account</Header>
 

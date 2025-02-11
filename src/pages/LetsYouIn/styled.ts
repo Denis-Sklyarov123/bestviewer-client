@@ -3,14 +3,13 @@ import BtnAccount from "../../components/BtnAccount";
 import BtnUniversal from "../../components/BtnUniversal";
 
 export const Header = styled.div`
-  font-size: 7vh;
+  font-size: 4vh;
   font-weight: bold;
 `;
 
 export const AccountSelectorBar = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2em;
 `;
 
 export const ContentSection = styled.div`

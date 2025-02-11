@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import AppleIcon from "../../assets/icon/apple.svg?react";
 import FacebookIcon from "../../assets/icon/facebook.svg?react";
 import GoogleIcon from "../../assets/icon/google.svg?react";
-import CinemaLogo from "../../assets/icon/videoCameraCinema.svg?react";
+import CinemaLogo from "../../assets/icon/main-icon-face-nobody.svg?react";
 import {
   AccountSelectorBar,
   ContentSection,
