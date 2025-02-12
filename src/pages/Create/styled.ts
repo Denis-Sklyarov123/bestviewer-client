@@ -2,6 +2,16 @@ import styled from "styled-components";
 import BtnAccount from "../../components/BtnAccount";
 import BtnUniversal from "../../components/BtnUniversal";
 
+export const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 100vh;
+  border-radius: 8px;
+`;
+
 export const Header = styled.h2``;
 
 export const ContentSection = styled.div`
@@ -50,5 +60,4 @@ export const AccountBtn = styled(BtnAccount)`
   border-color: rgba(0, 0, 0, 0.1);
 `;
 
-export const UniversalBtn = styled(BtnUniversal)`
-`;
+export const UniversalBtn = styled(BtnUniversal)``;

@@ -4,7 +4,8 @@ export const ContainerWrapper = styled.div<{ $isFocused: boolean }>`
   border-radius: 10px;
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 7vh;
+  height: 5vh;
+  width: 16vw;
   border: ${({ $isFocused }) => ($isFocused ? "1" : "0")}px solid
     ${({ $isFocused }) => ($isFocused ? "green" : "gray")};
   background: ${(props) => (props.$isFocused ? "#ebfaf1" : "#fafafa")};

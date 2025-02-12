@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import BtnUniversal from "../../components/BtnUniversal";
-import getStartedImg from "../../assets/images/get-started.jpg";
 
 export const Layout = styled.div`
-  background-image: url("${getStartedImg}") !important;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  border-radius: 8px;
 `;
 
 export const Header = styled.div`
@@ -19,13 +22,7 @@ export const Header = styled.div`
 
 export const ContinueWith = styled.h4`
   margin-bottom: 0px;
+  margin-bottom: revert;
 `;
 
 export const UniversalBtn = styled(BtnUniversal)``;
-
-// export const Body = styled.div`
-//   background-image: ${({ isGetStarted }) =>
-//     isGetStarted && url("${getStartedImg}")};
-
-//   background-color: ${({ isGetStarted }) => !isGetStarted && "grey"};
-// `;

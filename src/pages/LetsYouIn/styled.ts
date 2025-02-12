@@ -12,6 +12,19 @@ export const AccountSelectorBar = styled.div`
   flex-direction: column;
 `;
 
+export const CinemaLogoContainer = styled.div`
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  background-color: #06c149;
+св
+  &:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.3);
+`;
+
 export const ContentSection = styled.div`
   display: flex;
   flex-direction: row;

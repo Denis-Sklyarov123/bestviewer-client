@@ -1,18 +1,20 @@
 import styled from "styled-components";
-import getStartedImg from "./assets/images/get-started.jpg";
+import getStartedImg from "./assets/images/anime-characters-body.jpg";
 
-// export const Body = styled.div`
-//   background-image: ${({ isGetStarted }) =>
-//     isGetStarted && url("${getStartedImg}")};
+interface BodyProps {
+  isGetStarted: boolean;
+}
 
-//   background-color: ${({ isGetStarted }) => !isGetStarted && "grey"};
-// `;
-
-export const Body = styled.div`
-  background-image: url("${getStartedImg}") !important;
+export const Body = styled.div<BodyProps>`
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 200vh;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url(${({ isGetStarted }) => isGetStarted && getStartedImg});
+  background-color: ${({ isGetStarted }) => !isGetStarted && "#242424"};
 `;

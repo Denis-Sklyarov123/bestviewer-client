@@ -7,7 +7,6 @@ import CreateAccount from "./pages/Create/index.tsx";
 import LoginAccount from "./pages/Login/index.tsx";
 import ChooseInterest from "./pages/ChooseInterest/index.tsx";
 
-// import { Body } from "./styled.ts";
 import "./main.css";
 
 const router = createBrowserRouter([
@@ -24,9 +23,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <React.StrictMode>
-      {/* <Body> */}
       <RouterProvider router={router} />
-      {/* </Body> */}
     </React.StrictMode>
   </React.StrictMode>
 );
