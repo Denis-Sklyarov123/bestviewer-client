@@ -20,7 +20,7 @@ export const CinemaLogoContainer = styled.div`
   border-radius: 50%;
   transition: box-shadow 0.3s ease;
   background-color: #06c149;
-св
+
   &:hover {
     box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.3);
 `;
