@@ -4,8 +4,8 @@ import InputUniversal from "../../components/InputUniversal/index.tsx";
 import AppleIcon from "../../assets/icon/apple.svg?react";
 import FacebookIcon from "../../assets/icon/facebook.svg?react";
 import GoogleIcon from "../../assets/icon/google.svg?react";
-import CinemaLogo from "../../assets/icon/main-icon-sharingan.svg?react";
 import { InputEnum } from "../../types/enums/InputEnum.ts";
+import CinemaLogo from "../../assets/icon/main-icon-sharingan.svg";
 import {
   ContainerInput,
   ContentSection,
@@ -16,6 +16,7 @@ import {
   ContinueWith,
   AccountBtn,
   UniversalBtn,
+  StyledCinemaLogo,
 } from "./styled";
 import { Body } from "../../styled.ts";
 
@@ -25,7 +26,7 @@ function LoginAccount() {
   return (
     <>
       <Body isGetStarted={false}>
-        <CinemaLogo width={200} height={200} />
+        <StyledCinemaLogo src={CinemaLogo} width={200} height={200} />
 
         <Header>Login to Your Account</Header>
 
