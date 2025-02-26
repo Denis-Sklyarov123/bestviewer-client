@@ -85,7 +85,7 @@ function ChooseInterest() {
             minWidth="20vh"
             color=""
             bgColor="#06c149"
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/fillProfile")}
             label="Continue"
           />
         </ContainerBtnNavigate>
