@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { AvatarDefault, AvatarAddedImg } from "./styled";
+
+import {
+  AvatarWrapper,
+  AvatarImage,
+  AvatarPlaceholder,
+  HiddenInput,
+} from "./styled";
 
 const AvatarUploader = () => {
   const [avatar, setAvatar] = useState<string | null>(null);
@@ -8,33 +14,29 @@ const AvatarUploader = () => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setAvatar(reader.result as string);
-      };
+      reader.onloadend = () => setAvatar(reader.result as string);
       reader.readAsDataURL(file);
     }
   };
 
   return (
-    <div>
-      <div
+    <>
+      <AvatarWrapper
         onClick={() => document.getElementById("fileInput")?.click()}
-        style={{ cursor: "pointer" }}
       >
         {avatar ? (
-          <AvatarAddedImg src={avatar} alt="Avatar" />
+          <AvatarImage src={avatar} alt="Avatar" />
         ) : (
-          <AvatarDefault>Upload Avatar</AvatarDefault>
+          <AvatarPlaceholder>Upload Avatar</AvatarPlaceholder>
         )}
-      </div>
-      <input
+      </AvatarWrapper>
+      <HiddenInput
         id="fileInput"
         type="file"
-        style={{ display: "none" }}
         accept="image/*"
         onChange={handleImageUpload}
       />
-    </div>
+    </>
   );
 };
 

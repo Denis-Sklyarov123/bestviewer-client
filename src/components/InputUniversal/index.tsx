@@ -10,6 +10,8 @@ import EyeSlashGreenPassword from "../../assets/icon/eye-slash-green.svg?react";
 import EyeSlashPassword from "../../assets/icon/eye-slash-solid.svg?react";
 import EyeSlashGrayPassword from "../../assets/icon/eye-slash-gray.svg?react";
 import { CustomInput, IconWrapper, ContainerWrapper } from "./styled";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 interface InputType {
   type?: InputEnum;
@@ -19,6 +21,7 @@ function InputUniversal(props: InputType) {
   const { type = InputEnum.default } = props;
   const [isFocused, setIsFocused] = useState(false);
   const [isInputValue, setInputValue] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -131,8 +134,28 @@ function InputUniversal(props: InputType) {
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             style={{ border: 0 }}
-            placeholder="Email"
+            placeholder=""
             type={type}
+          />
+        </>
+      )}
+      {type === InputEnum.phoneNumber && (
+        <>
+          <PhoneInput
+            country={"us"}
+            value={phone}
+            onChange={setPhone}
+            inputStyle={{
+              width: "100%",
+              height: "100%",
+              color: "black",
+              borderRadius: "10px",
+            }}
+            buttonStyle={{
+              backgroundColor: "#fff",
+              color: "#000",
+            }}
+            containerClass="PhoneInputContainer"
           />
         </>
       )}

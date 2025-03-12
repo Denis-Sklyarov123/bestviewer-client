@@ -9,7 +9,7 @@ export const ContainerWrapper = styled.div<{ $isFocused: boolean }>`
   border: ${({ $isFocused }) => ($isFocused ? "1" : "0")}px solid
     ${({ $isFocused }) => ($isFocused ? "green" : "gray")};
   background: ${(props) => (props.$isFocused ? "#ebfaf1" : "#fafafa")};
-  overflow: hidden;
+  // overflow: hidden;
 `;
 
 export const IconWrapper = styled.div<{ $isInputEmpty?: boolean }>`
@@ -26,6 +26,7 @@ export const CustomInput = styled.input<{
   $isDefault?: boolean;
   $isFocused: boolean;
 }>`
+  color: #000;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   border: 0px;
   width: ${({ $isDefault }) => ($isDefault ? "100" : "85")}%;
@@ -33,4 +34,7 @@ export const CustomInput = styled.input<{
   &:focus {
     outline: none;
     border: 1px solid blue;
+    border-radius: 10px;
+  }
+  border-radius: 10px;
 `;

@@ -18,7 +18,7 @@ function FillYourProfile() {
         <ContainerInput>
           <InputUniversal type={InputEnum.email} />
 
-          <InputUniversal type={InputEnum.password} />
+          <InputUniversal type={InputEnum.phoneNumber} />
 
           <InputUniversal type={InputEnum.password} />
 

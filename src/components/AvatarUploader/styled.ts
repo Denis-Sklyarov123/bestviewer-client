@@ -1,17 +1,35 @@
 import styled from "styled-components";
 
-export const AvatarDefault = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #ccc;
+export const AvatarWrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+  border-radius: 50%;
+  background: #f0f0f0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
 `;
 
-export const AvatarAddedImg = styled.img`
-  width: 100px;
-  height: 100px;
+export const AvatarImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
+`;
+
+export const AvatarPlaceholder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  font-size: 14px;
+`;
+
+export const HiddenInput = styled.input`
+  display: none;
 `;
