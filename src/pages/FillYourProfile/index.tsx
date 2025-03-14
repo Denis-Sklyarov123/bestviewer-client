@@ -4,6 +4,7 @@ import { InputEnum } from "../../types/enums/InputEnum.ts";
 import { ContainerInput, Header, UniversalBtn } from "./styled.ts";
 import { Body } from "../../styled.ts";
 import AvatarUploader from "../../components/AvatarUploader/index.tsx";
+import defaultAvatar from "../../assets/images/avatar-google-612x612.jpg";
 
 function FillYourProfile() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function FillYourProfile() {
   return (
     <>
       <Body isGetStarted={false}>
-        <AvatarUploader></AvatarUploader>
+        <AvatarUploader initialImage={defaultAvatar} />
 
         <Header>Fill Your Profile</Header>
 
@@ -20,11 +21,11 @@ function FillYourProfile() {
 
           <InputUniversal type={InputEnum.phoneNumber} />
 
-          <InputUniversal type={InputEnum.password} />
+          <InputUniversal type={InputEnum.default} placeholder="Full Name" />
 
-          <InputUniversal type={InputEnum.password} />
+          <InputUniversal type={InputEnum.default} placeholder="Nickname" />
 
-          <InputUniversal type={InputEnum.password} />
+          <InputUniversal type={InputEnum.gender} />
         </ContainerInput>
 
         <UniversalBtn

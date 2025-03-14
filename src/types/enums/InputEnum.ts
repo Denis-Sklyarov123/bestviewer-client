@@ -3,4 +3,5 @@ export enum InputEnum {
   email = "email",
   default = "default",
   phoneNumber = "phoneNumber",
+  gender = "gender",
 }

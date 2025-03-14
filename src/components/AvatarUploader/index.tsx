@@ -7,8 +7,12 @@ import {
   HiddenInput,
 } from "./styled";
 
-const AvatarUploader = () => {
-  const [avatar, setAvatar] = useState<string | null>(null);
+interface AvatarUploaderProps {
+  initialImage?: string;
+}
+
+const AvatarUploader = ({ initialImage }: AvatarUploaderProps) => {
+  const [avatar, setAvatar] = useState<string | null>(initialImage || null);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -27,7 +31,7 @@ const AvatarUploader = () => {
         {avatar ? (
           <AvatarImage src={avatar} alt="Avatar" />
         ) : (
-          <AvatarPlaceholder>Upload Avatar</AvatarPlaceholder>
+          <AvatarPlaceholder></AvatarPlaceholder>
         )}
       </AvatarWrapper>
       <HiddenInput
