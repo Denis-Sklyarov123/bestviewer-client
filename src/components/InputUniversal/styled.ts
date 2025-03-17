@@ -10,8 +10,8 @@ export const ContainerWrapper = styled.div<{ $isFocused: boolean }>`
   border: ${({ $isFocused }) => ($isFocused ? "1" : "0")}px solid
     ${({ $isFocused }) => ($isFocused ? "green" : "gray")};
   background: ${(props) => (props.$isFocused ? "#ebfaf1" : "#fafafa")};
-  // overflow: hidden;
   position: relative;
+  align-items: center;
 `;
 
 export const IconWrapper = styled.div<{ $isInputEmpty?: boolean }>`
@@ -41,11 +41,27 @@ export const CustomInput = styled.input<{
   border-radius: 10px;
 `;
 
+export const GenderInput = styled(CustomInput)`
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  padding-left: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+`;
+
 // Стили для выпадающего списка гендеров
 export const SelectWrapper = styled.div`
   position: relative;
   width: 100%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
 `;
 
 export const ArrowIcon = styled.div`
@@ -57,6 +73,10 @@ export const ArrowIcon = styled.div`
   color: #666;
   font-size: 12px;
   transition: color 0.3s ease;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     color: #06c149;
@@ -106,6 +126,7 @@ export const PhoneInputGlobalStyles = createGlobalStyle`
   .custom-phone-container {
     position: relative;
     width: 100%;
+    height: 100%;
   }
   
   /* Стили для инпута при наведении */
@@ -116,40 +137,54 @@ export const PhoneInputGlobalStyles = createGlobalStyle`
   
   /* Стили для инпута при фокусе */
   .custom-phone-input:focus {
-    box-shadow: 0 0 0 1px rgba(6, 193, 73, 0.9) !important;
-    border-radius: 10px !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
   }
   
   /* Стили для кнопки выбора страны при наведении */
-  .custom-phone-button:hover,
   .react-tel-input .selected-flag:hover {
     background-color: #f5f5f5 !important;
     border-radius: 10px 0 0 10px !important;
   }
   
   /* Стили для кнопки выбора страны при фокусе */
-  .custom-phone-button:focus,
   .react-tel-input .selected-flag:focus {
     background-color: #f5f5f5 !important;
     border-radius: 10px 0 0 10px !important;
-    box-shadow: 0 0 0 1px rgba(6, 193, 73, 0.9) !important;
+    box-shadow: none !important;
   }
   
   /* Стили для выпадающего списка */
-  .custom-phone-dropdown {
+  .custom-phone-dropdown,
+  .react-tel-input .country-list {
     color: black !important;
     border-radius: 10px !important;
     max-height: 300px !important;
     overflow-y: auto !important;
+    position: absolute !important;
+    z-index: 20 !important;
+    right: 100% !important;
+    left: auto !important;
+    top: -12px !important;
+    margin-right: 10px !important;
   }
   
   /* Стили для элементов списка при наведении */
-  .custom-phone-dropdown .country:hover {
+  .custom-phone-dropdown .country:hover,
+  .react-tel-input .country-list .country:hover {
     background-color: #f5f5f5 !important;
   }
   
   /* Стили для выбранного элемента списка */
-  .custom-phone-dropdown .highlight {
+  .custom-phone-dropdown .highlight,
+  .react-tel-input .country-list .highlight {
     background-color: rgba(6, 193, 73, 0.9) !important;
+  }
+  
+  /* Убираем границы и тени */
+  .react-tel-input .form-control {
+    border: none !important;
+    box-shadow: none !important;
   }
 `;

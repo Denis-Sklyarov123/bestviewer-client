@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { InputEnum } from "../../types/enums/InputEnum";
 import PasswordIcon from "../../assets/icon/lock-solid.svg?react";
 import PasswordGreenIcon from "../../assets/icon/lock-green.svg?react";
@@ -18,6 +18,7 @@ import {
   CustomSelect,
   SelectOption,
   ArrowIcon,
+  GenderInput,
 } from "./styled";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -44,6 +45,9 @@ function InputUniversal(props: InputType) {
   const [isGenderDropdownOpen, setIsGenderDropdownOpen] = useState(false);
   const [filteredGenderOptions, setFilteredGenderOptions] =
     useState(genderOptions);
+
+  // Создаем ref для компонента выбора гендера
+  const genderSelectRef = useRef<HTMLDivElement>(null);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -73,6 +77,24 @@ function InputUniversal(props: InputType) {
     setGenderInputValue(label);
     setIsGenderDropdownOpen(false);
   };
+
+  // Обработчик клика вне компонента
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        genderSelectRef.current &&
+        !genderSelectRef.current.contains(event.target as Node)
+      ) {
+        setIsGenderDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // Обновляем отфильтрованные опции при открытии выпадающего списка
   useEffect(() => {
@@ -194,19 +216,16 @@ function InputUniversal(props: InputType) {
           </>
         )}
         {type === InputEnum.gender && (
-          <SelectWrapper>
-            <CustomInput
+          <SelectWrapper ref={genderSelectRef}>
+            <GenderInput
               $isFocused={isFocused}
+              $isDefault={true}
               onFocus={() => {
                 setIsFocused(true);
-                // Не открываем выпадающий список при фокусе
               }}
               onBlur={() => {
                 setIsFocused(false);
-                // Задержка, чтобы успеть выбрать опцию перед закрытием
-                setTimeout(() => setIsGenderDropdownOpen(false), 200);
               }}
-              style={{ border: 0 }}
               placeholder="Select Gender"
               value={genderInputValue}
               onChange={handleGenderInputChange}

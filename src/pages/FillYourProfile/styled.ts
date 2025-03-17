@@ -63,6 +63,10 @@ export const AccountBtn = styled(BtnAccount)`
 
 export const UniversalBtn = styled(BtnUniversal)``;
 
+export const ButtonWrapper = styled.div`
+  margin-top: 2vh;
+`;
+
 export const StyledCinemaLogo = styled.img`
   border-radius: 50%;
   transform-origin: center;

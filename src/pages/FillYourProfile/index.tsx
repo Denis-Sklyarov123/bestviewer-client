@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import InputUniversal from "../../components/InputUniversal/index.tsx";
 import { InputEnum } from "../../types/enums/InputEnum.ts";
-import { ContainerInput, Header, UniversalBtn } from "./styled.ts";
+import {
+  ButtonWrapper,
+  ContainerInput,
+  Header,
+  UniversalBtn,
+} from "./styled.ts";
 import { Body } from "../../styled.ts";
 import AvatarUploader from "../../components/AvatarUploader/index.tsx";
 import defaultAvatar from "../../assets/images/avatar-google-612x612.jpg";
@@ -28,13 +33,15 @@ function FillYourProfile() {
           <InputUniversal type={InputEnum.gender} />
         </ContainerInput>
 
-        <UniversalBtn
-          minWidth=""
-          color=""
-          bgColor="#06c149"
-          onClick={() => navigate("/interest")}
-          label="Sign in"
-        />
+        <ButtonWrapper>
+          <UniversalBtn
+            minWidth=""
+            color=""
+            bgColor="#06c149"
+            onClick={() => navigate("/interest")}
+            label="Sign in"
+          />
+        </ButtonWrapper>
       </Body>
     </>
   );
